@@ -1,7 +1,13 @@
 package com.pineneedle.pokemonapp.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class GenerationIiiModel(
     val emerald: EmeraldModel,
-    val firered-leafgreen: FireredLeafgreenModel,
-    val ruby-sapphire: RubySapphireModel
+
+    @SerializedName("firered-leafgreen")
+    val fireredLeafgreen: FireredLeafgreenModel,
+
+    @SerializedName("ruby-sapphire")
+    val rubySapphire: RubySapphireModel
 )

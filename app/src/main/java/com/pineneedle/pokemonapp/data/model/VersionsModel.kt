@@ -1,12 +1,29 @@
 package com.pineneedle.pokemonapp.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class VersionsModel(
-    val generation-i: GenerationIModel,
-    val generation-ii: GenerationIiModel,
-    val generation-iii: GenerationIiiModel,
-    val generation-iv: GenerationIvModel,
-    val generation-v: GenerationVModel,
-    val generation-vi: GenerationViModel,
-    val generation-vii: GenerationViiModel,
-    val generation-viii: GenerationViiiModel
+    @SerializedName("generation-i")
+    val generation1: GenerationIModel,
+
+    @SerializedName("generation-ii")
+    val generation2: GenerationIiModel,
+
+    @SerializedName("generation-iii")
+    val generation3: GenerationIiiModel,
+
+    @SerializedName("generation-iv")
+    val generation4: GenerationIvModel,
+
+    @SerializedName("generation-v")
+    val generation5: GenerationVModel,
+
+    @SerializedName("generation-vi")
+    val generation6: GenerationViModel,
+
+    @SerializedName("generation-vii")
+    val generation7: GenerationViiModel,
+
+    @SerializedName("generation-viii")
+    val generation8: GenerationViiiModel
 )

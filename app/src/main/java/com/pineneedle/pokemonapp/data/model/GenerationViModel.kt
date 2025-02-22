@@ -1,6 +1,11 @@
 package com.pineneedle.pokemonapp.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class GenerationViModel(
-    val omegaruby-alphasapphire: OmegarubyAlphasapphireModel,
-    val x-y: XYModel
+    @SerializedName("omegaruby-alphasapphire")
+    val omegarubyAlphasapphire: OmegarubyAlphasapphireModel,
+
+    @SerializedName("x-y")
+    val xY: XYModel
 )
