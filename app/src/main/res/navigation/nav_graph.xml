@@ -9,7 +9,8 @@
         android:id="@+id/dashboardFragment"
         android:name="com.pineneedle.pokemonapp.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+    </fragment>
     <fragment
         android:id="@+id/searchPokemonFragment"
         android:name="com.pineneedle.pokemonapp.ui.search_pokemon.SearchPokemonFragment"
@@ -20,4 +21,10 @@
         android:name="com.pineneedle.pokemonapp.ui.logout.LogoutFragment"
         android:label="fragment_logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/singlePokemonFragment"
+        android:name="com.pineneedle.pokemonapp.ui.single_pokemon.SinglePokemonFragment"
+        android:label="fragment_single_pokemon"
+        tools:layout="@layout/fragment_single_pokemon" />
+
 </navigation>

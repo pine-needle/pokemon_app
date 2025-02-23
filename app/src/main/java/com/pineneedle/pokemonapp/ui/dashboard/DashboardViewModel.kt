@@ -22,7 +22,7 @@ class DashboardViewModel @Inject constructor(private val _apiDetails: ApiDetails
         viewModelScope.launch {
             val tempPokemonList = mutableListOf<PokemonModel>()
 
-            for(i in 1.rangeTo(5)){
+            for(i in 1.rangeTo(20)){
                 tempPokemonList.add(_apiDetails.getPokemonDetails(i))
             }
 
