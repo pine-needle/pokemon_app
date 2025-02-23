@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+<resources>   <color name="blue">#007AFF</color>
+    <color name="gray">#A0A0A0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_blue">#1565C0</color>
+    <color name="yellow">#FFD700</color>  <!-- Bright Yellow -->
+    <color name="dark_yellow">#FFC107</color>  <!-- Slightly Darker Yellow -->
+
 </resources>
