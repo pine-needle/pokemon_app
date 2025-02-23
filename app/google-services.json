@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "430639634247",
+    "project_id": "pokemonapp-26a4c",
+    "storage_bucket": "pokemonapp-26a4c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430639634247:android:ff8aa44014fbfcb764de62",
+        "android_client_info": {
+          "package_name": "com.pineneedle.pokemonapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnQOij2vZ_S7uh9dq3lUdGmnL_1IGGBXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
