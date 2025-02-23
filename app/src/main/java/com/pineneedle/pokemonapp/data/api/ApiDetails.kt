@@ -20,9 +20,4 @@ interface ApiDetails {
         @Path("id") id: Int
     ): PokemonModel
 
-    @GET("${ApiReference.END_POINT}/{name}")
-    suspend fun getPokemonLists(
-        @Query("limit") limit: String = "1000",
-        @Query("offset") offset: String = "0"
-    ): PokemonListModel
 }
