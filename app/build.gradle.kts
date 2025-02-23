@@ -1,6 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    // firebase
+    id("com.google.gms.google-services")
+    alias(libs.plugins.google.firebase.crashlytics)
+
+
     // hilt dependencies
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
@@ -46,14 +52,25 @@ android {
 
 dependencies {
 
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
+    //analtics
+    implementation("com.google.firebase:firebase-analytics")
+
+
 
     //Navigation Dependencies
     implementation(libs.androidx.navigation.fragment.ktx)
