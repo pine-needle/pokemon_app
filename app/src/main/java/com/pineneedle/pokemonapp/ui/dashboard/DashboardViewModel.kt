@@ -1,6 +1,5 @@
 package com.pineneedle.pokemonapp.ui.dashboard
 
-import androidx.core.util.rangeTo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
