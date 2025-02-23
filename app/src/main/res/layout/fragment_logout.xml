@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="16dp"
-    android:background="#E7E75D"> <!-- Light yellow background -->
+    android:background="@color/yellow"> <!-- Light yellow background -->
 
     <!-- CardView for the logout confirmation -->
     <androidx.cardview.widget.CardView
