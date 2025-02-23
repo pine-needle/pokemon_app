@@ -10,20 +10,20 @@ import com.pineneedle.pokemonapp.databinding.ItemPokemonBinding
 
 class DashboardAdapter(
     val pokemonList: List<PokemonModel>,
+) : RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
 
-): RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
+    class DashboardViewHolder(
+        val binding: ItemPokemonBinding,
+    ) : ViewHolder(binding.root) {
 
-    class DashboardViewHolder(val binding: ItemPokemonBinding): ViewHolder(binding.root){
-
-        fun bindData(pokemon: PokemonModel){
+        fun bindData(pokemon: PokemonModel) {
             binding.tvPokemonName.text = pokemon.name
-            binding.tvBaseExperience.text =  "Expereince: ${pokemon.base_experience}"
+            binding.tvBaseExperience.text = "Expereince: ${pokemon.base_experience}"
 
             Glide.with(itemView.context)
                 .load(pokemon.sprites.other.home.front_default)
                 .into(binding.imgPokemon)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
@@ -31,7 +31,6 @@ class DashboardAdapter(
         val binding = ItemPokemonBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
-
         return DashboardViewHolder(binding)
     }
 
