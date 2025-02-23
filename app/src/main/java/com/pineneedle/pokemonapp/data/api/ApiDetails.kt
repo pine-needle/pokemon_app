@@ -1,5 +1,6 @@
 package com.pineneedle.pokemonapp.data.api
 
+import com.pineneedle.pokemonapp.data.model.PokemonListModel
 import com.pineneedle.pokemonapp.data.model.PokemonModel
 import com.pineneedle.pokemonapp.data.model.ResponseModel
 import retrofit2.http.GET
@@ -18,4 +19,10 @@ interface ApiDetails {
     suspend fun getPokemonDetails(
         @Path("id") id: Int
     ): PokemonModel
+
+    @GET("${ApiReference.END_POINT}/{name}")
+    suspend fun getPokemonLists(
+        @Query("limit") limit: String = "1000",
+        @Query("offset") offset: String = "0"
+    ): PokemonListModel
 }
