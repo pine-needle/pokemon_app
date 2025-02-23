@@ -5,21 +5,48 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.pineneedle.pokemonapp.R
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import com.pineneedle.pokemonapp.data.model.PokemonListModel
+import com.pineneedle.pokemonapp.databinding.FragmentDashboardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private var _binding: FragmentDashboardBinding? = null
+    private val viewModel: DashboardViewModel by viewModels()
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        viewModel.pokemonListData.observe(viewLifecycleOwner) {
+            setupUI(it)
+        }
+
+        viewModel.getPokemonList()
+
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setupUI(pokemonListModel: PokemonListModel ) {
+        binding.recyclerView.apply {
+            adapter = DashboardAdapter(pokemonListModel.result)
+            layoutManager = GridLayoutManager(requireContext(), 2)
+        }
     }
 
 }
