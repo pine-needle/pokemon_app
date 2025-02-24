@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/dashboardFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.pineneedle.pokemonapp.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+    </fragment>
     <fragment
         android:id="@+id/searchPokemonFragment"
         android:name="com.pineneedle.pokemonapp.ui.search_pokemon.SearchPokemonFragment"
@@ -22,8 +23,22 @@
         tools:layout="@layout/fragment_logout" />
 
     <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pineneedle.pokemonapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.pineneedle.pokemonapp.ui.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
         android:id="@+id/singlePokemonFragment"
         android:name="com.pineneedle.pokemonapp.ui.single_pokemon.SinglePokemonFragment"
+        android:label="fragment_single_pokemon"
         tools:layout="@layout/fragment_single_pokemon" />
+
 
 </navigation>

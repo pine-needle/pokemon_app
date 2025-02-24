@@ -1,6 +1,6 @@
 [versions]
 agp = "8.8.0"
-kotlin = "1.9.24"
+kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -13,7 +13,9 @@ navigationFragmentKtx = "2.8.7" # navigation
 navigationUiKtx = "2.8.7" # navigation
 retrofit = "2.11.0"  # retrofit version
 lifecycleRuntimeKtx = "2.8.7"
-carUiLib = "2.6.0"  # viewModel runtime version
+googleGmsGoogleServices = "4.4.2"
+firebaseAnalytics = "22.2.0"
+firebaseAuthKtx = "23.2.0"  # viewModel runtime version
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,9 +31,11 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" } # retrofit
 squareup-convertergson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" } # gson
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-car-ui-lib = { group = "com.android.car.ui", name = "car-ui-lib", version.ref = "carUiLib" } # viewmodel
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" } # viewmodel
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
