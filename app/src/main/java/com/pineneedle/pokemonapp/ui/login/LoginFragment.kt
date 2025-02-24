@@ -75,6 +75,10 @@ class LoginFragment : Fragment() {
 
     private fun navigateToDashboard() {
         // Use the Navigation Component to navigate to DashboardFragment
+        // Clear the back stack to prevent going back to the login screen
+
+        findNavController().popBackStack(R.id.logoutFragment, true)
+
         findNavController().navigate(R.id.dashboardFragment)
     }
 

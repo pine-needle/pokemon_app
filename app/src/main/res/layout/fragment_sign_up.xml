@@ -67,7 +67,7 @@
 
     <!-- Error Message -->
     <TextView
-        android:id="@+id/tvError"
+        android:id="@+id/tverror"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@android:color/holo_red_dark"
@@ -93,7 +93,7 @@
 
     <!-- Already have an account? -->
     <TextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/tvlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
