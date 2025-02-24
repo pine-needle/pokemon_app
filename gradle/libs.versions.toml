@@ -12,7 +12,8 @@ constraintlayout = "2.2.0"
 navigationFragmentKtx = "2.8.7" # navigation
 navigationUiKtx = "2.8.7" # navigation
 retrofit = "2.11.0"  # retrofit version
-lifecycleRuntimeKtx = "2.8.7"  # viewModel runtime version
+lifecycleRuntimeKtx = "2.8.7"
+carUiLib = "2.6.0"  # viewModel runtime version
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,7 +28,8 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" } # navigation
 squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" } # retrofit
 squareup-convertergson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" } # gson
-androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" } # viewmodel
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+car-ui-lib = { group = "com.android.car.ui", name = "car-ui-lib", version.ref = "carUiLib" } # viewmodel
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

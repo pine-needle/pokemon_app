@@ -1,6 +1,6 @@
 package com.pineneedle.pokemonapp.ui.dashboard
 
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,12 +11,13 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.pineneedle.pokemonapp.R
 import com.pineneedle.pokemonapp.data.model.PokemonModel
+import com.pineneedle.pokemonapp.databinding.ItemPokemonBinding
+
 
 class DashboardAdapter(
     val pokemonList: List<PokemonModel>,
     private val onPokemonClick: (PokemonModel) -> Unit
 ) : RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
-
 
     class DashboardViewHolder(val view: View) :
         ViewHolder(view) {
@@ -32,21 +33,19 @@ class DashboardAdapter(
                 .load(pokemon.sprites.other.home.front_default)
                 .into(pokemonImage)
 
-            itemView.setOnClickListener {
-                Log.d("DashboardAdapter", "Clicked on: ${pokemon.name}") // Debug Log
-                onPokemonClick(pokemon) // Pass the entire PokemonModel
+           ItemPokemonBinding.bind(view).btnViewDetails.setOnClickListener {
+                onPokemonClick(pokemon)
             }
         }
     }
 
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
-        val pokemon = pokemonList[position] // Get the correct Pokémon
-        holder.bindData(pokemon, onPokemonClick) // Pass the full model
+        val pokemon = pokemonList[position]
+        holder.bindData(pokemon, onPokemonClick)
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
-
         return DashboardViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon, parent, false)
         )

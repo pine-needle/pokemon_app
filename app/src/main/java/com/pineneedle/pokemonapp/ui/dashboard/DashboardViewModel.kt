@@ -1,5 +1,6 @@
 package com.pineneedle.pokemonapp.ui.dashboard
 
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,6 +11,7 @@ import com.pineneedle.pokemonapp.data.model.PokemonModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
 
 @HiltViewModel
 class DashboardViewModel @Inject constructor(private val _apiDetails: ApiDetails): ViewModel() {
@@ -28,6 +30,5 @@ class DashboardViewModel @Inject constructor(private val _apiDetails: ApiDetails
             _pokemonList.postValue(PokemonListModel(tempPokemonList))
         }
     }
-
 
 }
