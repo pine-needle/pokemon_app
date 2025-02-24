@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -41,6 +42,17 @@ class SignUpFragment : Fragment() {
             } else {
                 Toast.makeText(context, "Please enter email and password", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        val registerTextView = view.findViewById<TextView>(R.id.tvLogin)
+        val registerTextView2 = view.findViewById<TextView>(R.id.btnSignup)
+
+        registerTextView.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        }
+
+        registerTextView2.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
 
         return view

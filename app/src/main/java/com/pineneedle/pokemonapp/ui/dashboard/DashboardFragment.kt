@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.pineneedle.pokemonapp.MainActivity
 import com.pineneedle.pokemonapp.R
 import com.pineneedle.pokemonapp.data.model.PokemonListModel
 import com.pineneedle.pokemonapp.data.model.PokemonModel
@@ -35,6 +37,11 @@ class DashboardFragment : Fragment() {
         }
 
         viewModel.getPokemonList()
+
+        if (activity != null) {
+            (activity as MainActivity).findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+                .visibility = View.VISIBLE
+        }
 
         return binding.root
     }

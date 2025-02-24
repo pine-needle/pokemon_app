@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.pineneedle.pokemonapp.MainActivity
 import com.pineneedle.pokemonapp.R
 
 class LoginFragment : Fragment() {
@@ -43,6 +46,16 @@ class LoginFragment : Fragment() {
             }
         }
 
+        if (activity != null) {
+            (activity as MainActivity).findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+                .visibility = View.GONE
+        }
+
+        val registerTextView = view.findViewById<TextView>(R.id.tvSignUp)
+        registerTextView.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
+
         return view
     }
 
@@ -64,4 +77,5 @@ class LoginFragment : Fragment() {
         // Use the Navigation Component to navigate to DashboardFragment
         findNavController().navigate(R.id.dashboardFragment)
     }
+
 }
