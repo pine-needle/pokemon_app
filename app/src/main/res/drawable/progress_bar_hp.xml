@@ -1,0 +1,26 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background of the progress bar -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="#D3D3D3" /> <!-- Light Gray -->
+        </shape>
+    </item>
+
+    <!-- Progress color -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#C83407" /> <!-- Green -->
+            </shape>
+        </clip>
+    </item>
+
+    <!-- Secondary progress color (optional) -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#FFC107" /> <!-- Yellow -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>
