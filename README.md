@@ -38,8 +38,10 @@ This project showcases proficiency in Android development, RESTful API integrati
 
 3.Build and run the app on your device or emulator
 
-📂 Project Structure
-<img src="https://github.com/user-attachments/assets/73be01f4-a7c4-4add-b9b8-955221ff50fd" width="400"/>
+## 📂 Project Structure
+<img src="https://github.com/user-attachments/assets/73be01f4-a7c4-4add-b9b8-955221ff50fd" width="200"/>
+<br>
+
 
 🎯 Purpose
 This project was developed to demonstrate my skills in Android application development using Kotlin.
