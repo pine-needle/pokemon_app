@@ -22,8 +22,6 @@ This project showcases proficiency in Android development, RESTful API integrati
 
 ## 📸 Screenshots
 
-> Include screenshots of your app here (e.g., `screenshots/home.png`)
-
 ## 🧰 Getting Started
 
 ### Prerequisites
@@ -41,27 +39,7 @@ This project showcases proficiency in Android development, RESTful API integrati
 3.Build and run the app on your device or emulator
 
 📂 Project Structure
-css
-Copy
-Edit
-pokemon_app/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── example/
-│   │   │   │           └── pokemonapp/
-│   │   │   │               ├── ui/
-│   │   │   │               ├── data/
-│   │   │   │               └── network/
-│   │   │   └── res/
-│   │   │       ├── layout/
-│   │   │       └── values/
-├── build.gradle.kts
-├── settings.gradle.kts
-└── gradle/
-
+![image](https://github.com/user-attachments/assets/73be01f4-a7c4-4add-b9b8-955221ff50fd)
 
 🎯 Purpose
 This project was developed to demonstrate my skills in Android application development using Kotlin.
